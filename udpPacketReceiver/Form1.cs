@@ -65,6 +65,7 @@ namespace udpPacketReceiver
         {
             byte[] data = new byte[41];
             IPEndPoint ipep = new IPEndPoint(IPAddress.Any, xplaneDataSendPort);
+
             UdpClient newsock = new UdpClient(ipep);
 
             IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
@@ -82,20 +83,17 @@ namespace udpPacketReceiver
 
                 data = newsock.Receive(ref sender);
 
-                if (data[5] == (byte)commandID)
+                
+                for (int index = 0; index < data.Length; index++)
                 {
-
-                    for (int index = 0; index < data.Length; index++)
-                    {
-                        message += " " + data[index];
-                    }
-
-                    //message += "\r\n";
-
-                    addToTextBox(message);
-
-                    message = "";
+                    message += " " + data[index];
                 }
+
+                //message += "\r\n";
+
+                addToTextBox(message);
+
+                message = "";
             }
         }
 

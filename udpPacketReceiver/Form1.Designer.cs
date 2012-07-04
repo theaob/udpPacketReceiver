@@ -31,8 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.receivePortBox = new System.Windows.Forms.TextBox();
             this.startStopListenButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.commandIDBox = new System.Windows.Forms.TextBox();
             this.saveMessagesButton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -44,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -60,29 +58,13 @@
             // 
             // startStopListenButton
             // 
-            this.startStopListenButton.Location = new System.Drawing.Point(115, 56);
+            this.startStopListenButton.Location = new System.Drawing.Point(113, 32);
             this.startStopListenButton.Name = "startStopListenButton";
             this.startStopListenButton.Size = new System.Drawing.Size(75, 23);
             this.startStopListenButton.TabIndex = 2;
             this.startStopListenButton.Text = "Start";
             this.startStopListenButton.UseVisualStyleBackColor = true;
             this.startStopListenButton.Click += new System.EventHandler(this.startStopListenButton_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Command ID:";
-            // 
-            // commandIDBox
-            // 
-            this.commandIDBox.Location = new System.Drawing.Point(90, 28);
-            this.commandIDBox.Name = "commandIDBox";
-            this.commandIDBox.Size = new System.Drawing.Size(100, 20);
-            this.commandIDBox.TabIndex = 4;
             // 
             // saveMessagesButton
             // 
@@ -101,7 +83,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 56);
+            this.button1.Location = new System.Drawing.Point(12, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
@@ -121,9 +103,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 85);
+            this.listBox1.Location = new System.Drawing.Point(12, 61);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(176, 160);
+            this.listBox1.Size = new System.Drawing.Size(176, 186);
             this.listBox1.TabIndex = 11;
             // 
             // Form1
@@ -135,8 +117,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.saveMessagesButton);
-            this.Controls.Add(this.commandIDBox);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.startStopListenButton);
             this.Controls.Add(this.receivePortBox);
             this.Controls.Add(this.label1);
@@ -155,8 +135,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox receivePortBox;
         private System.Windows.Forms.Button startStopListenButton;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox commandIDBox;
         private System.Windows.Forms.Button saveMessagesButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
