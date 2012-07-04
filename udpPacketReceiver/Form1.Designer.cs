@@ -98,9 +98,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 254);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 13);
+            this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Received : {{count}}";
+            this.label3.Text = "Received : 0";
             // 
             // listBox1
             // 

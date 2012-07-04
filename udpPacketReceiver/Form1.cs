@@ -20,6 +20,10 @@ namespace udpPacketReceiver
 
         private int receiveCount = 0;
 
+        //private Timer timer = new Timer();
+
+        //private System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +33,7 @@ namespace udpPacketReceiver
         {
             receivePortBox.Text = xplaneDataSendPort.ToString();
                 //theIP = x.ToString();
+            
         }
 
         private void startStopListenButton_Click(object sender, EventArgs e)
@@ -72,8 +77,19 @@ namespace udpPacketReceiver
 
             String message = "";
 
+            //timer.Start();
+            //sw.Start();
             while (true)
             {
+                //if (timer.E >= 1000)
+                /*if (sw.ElapsedMilliseconds >= 1000)
+                {
+                    backgroundWorker1.CancelAsync();
+                    //timer.Stop();
+                    sw.Stop();
+                    //return;
+                }*/
+
                 if (backgroundWorker1.CancellationPending == true)
                 {
                     e.Cancel = true;
