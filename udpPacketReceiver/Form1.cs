@@ -83,17 +83,31 @@ namespace udpPacketReceiver
 
                 data = newsock.Receive(ref sender);
 
-                
-                for (int index = 0; index < data.Length; index++)
+                byte[] commandMessage = new byte[36];
+
+                for (int i = 5; i < data.Length; i = i + 36)
                 {
-                    message += " " + data[index];
+
+                    Array.Copy(data, i, commandMessage, 0, 36);
+                    if (commandMessage[0] == commandID)
+                    {
+
+                        
+
+                        for (int index = 0; index < commandMessage.Length; index++)
+                        {
+                            message += " " + commandMessage[index];
+                        }
+
+                        //message += "\r\n";
+
+                        addToTextBox(message);
+
+                        message = "";
+                    }
                 }
 
-                //message += "\r\n";
-
-                addToTextBox(message);
-
-                message = "";
+                
             }
         }
 
