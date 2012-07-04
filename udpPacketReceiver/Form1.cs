@@ -87,13 +87,9 @@ namespace udpPacketReceiver
 
                 for (int i = 5; i < data.Length; i = i + 36)
                 {
-
                     Array.Copy(data, i, commandMessage, 0, 36);
                     if (commandMessage[0] == commandID)
                     {
-
-                        
-
                         for (int index = 0; index < commandMessage.Length; index++)
                         {
                             message += " " + commandMessage[index];
@@ -106,8 +102,6 @@ namespace udpPacketReceiver
                         message = "";
                     }
                 }
-
-                
             }
         }
 
